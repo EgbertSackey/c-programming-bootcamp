@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+    int num1, num2, num3, max;
+    printf("Enter three numbers: ");
+    if (scanf("%d %d %d", &num1, &num2, &num3) != 3) {
+        printf("Try again!\n");
+        return 1;
+    }
+    max = num1;
+    if (num2 > max) max = num2;
+    if (num3 > max) max = num3;
+    if (num1 == num2 && num2 == num3) {
+        printf("All three numbers are equal!\n");
+    } else {
+        printf("Largest: %d\n", max);
+    }
+    return 0;
+}
